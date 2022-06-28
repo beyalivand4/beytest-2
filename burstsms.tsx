@@ -55,22 +55,27 @@ function createData(
   Type: string,
   From: string,
   To: string,
+  Created: string,
   Status: ChipProps,
 ) {
   return { Name, Type, From, To, Status };
 }
 const rows = [
-  createData('UX Conversation','Email cleans', 'Bey', 'Design contact list',
+  createData('UX Conversation','Email cleans', 'Bey', 'Design contact list', '2022/06/27',
   <Chip label="Sent" color="success" icon={<Done/>} variant="outlined"/>),
 
 
-  createData('Front-end convo','Credit Card Expiry', 'Chad', 'Frontend & UX list',<Chip label="Completed" color="success" icon={<DoneAllRounded/>}/>),
-  createData('MUI convo','Survey', 'Timo', 'Front-end guilt peeps',
+  createData('Front-end convo','Credit Card Expiry', 'Chad', 'Frontend & UX list','2022/06/19',<Chip label="Completed" color="success" icon={<DoneAllRounded/>}/>),
+  createData('MUI convo','Survey', 'Timo', 'Front-end guilt peeps','2022/06/13',
   <Chip label="Sending" color="primary" icon={<Pending/>} variant="outlined"/>),
-  createData('Scrum convo','Survey', 'John', 'Kando peeps',<Chip label="Draft" color="warning" icon={<DraftsTwoTone/>} variant="outlined"/>),
-  createData('PADs','Email cleans', 'Simon.M', 'Product Team',<Chip label="Completed" color="success" icon={<DoneAllRounded/>}/>),
-  createData('Dev talk','Survey', 'Simon.K', 'Dev contact list',<Chip label="Active" color="primary" icon={<CircleOutlined/>} variant="outlined"/>),
-  createData('Roadmap','Email cleans', 'Tim', 'Conversr contact list',<Chip label="Draft" color="warning" icon={<DraftsTwoTone/>} variant="outlined"/>),
+  createData('Scrum convo','Survey', 'John', 'Kando peeps','2022/06/11',
+  <Chip label="Draft" color="warning" icon={<DraftsTwoTone/>} variant="outlined"/>),
+  createData('PADs','Email cleans', 'Simon.M', 'Product Team', '2022/06/08',
+  <Chip label="Completed" color="success" icon={<DoneAllRounded/>}/>),
+  createData('Dev talk','Survey', 'Simon.K', 'Dev contact list','2022/06/07',
+  <Chip label="Active" color="primary" icon={<CircleOutlined/>} variant="outlined"/>),
+  createData('Roadmap','Email cleans', 'Tim', 'Conversr contact list','2022/06/03',
+  <Chip label="Draft" color="warning" icon={<DraftsTwoTone/>} variant="outlined"/>),
 ];
           
 export default function RecipeReviewCard() {
@@ -81,7 +86,7 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth:720
+    <Card sx={{ maxWidth:1440
 
      }}>
       <CardHeader
@@ -96,7 +101,7 @@ export default function RecipeReviewCard() {
         subheader="June 28, 2022"
       />
        <TableContainer component={Paper}>
-      <Table sx={{ maxWidth:720}} 
+      <Table sx={{ maxWidth:1440}} 
       aria-label="simple table">
         <TableHead>
           <TableRow>
