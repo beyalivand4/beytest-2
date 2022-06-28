@@ -81,7 +81,7 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth:400
+    <Card sx={{ maxWidth:650
 
      }}>
       <CardHeader
@@ -96,7 +96,7 @@ export default function RecipeReviewCard() {
         subheader="June 28, 2022"
       />
        <TableContainer component={Paper}>
-      <Table sx={{ maxWidth:1024 }} 
+      <Table sx={{ maxWidth:650}} 
       aria-label="simple table">
         <TableHead>
           <TableRow>
